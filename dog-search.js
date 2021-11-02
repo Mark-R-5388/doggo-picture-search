@@ -31,5 +31,16 @@ async function displayDogs(num) {
 showBtn.addEventListener("click", function () {
   dogImgContainer.innerHTML = "";
   let searchAmount = numberOfDogs.value;
-  displayDogs(searchAmount);
+  if (searchAmount < 1 || searchAmount > 50) {
+    displayError();
+  } else {
+    numberOfDogs.style.border = "1px solid black";
+
+    displayDogs(searchAmount);
+  }
 });
+
+function displayError() {
+  numberOfDogs.style.border = "1px solid red";
+  numberOfDogs.placeholder = "Please type a number between 1 and 50";
+}
