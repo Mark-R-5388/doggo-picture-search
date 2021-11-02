@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
+
+#dog-image-container {
+  margin: 0 auto;
+  border: 1px solid purple;
+  max-width: 900px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dog-picture {
+  margin: 0.5em;
+  border: 1px solid green;
+  min-width: 150px;
+  max-width: 25%;
+  height: 200px;
+  object-fit: cover;
+}
