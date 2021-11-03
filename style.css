@@ -2,8 +2,25 @@ html {
   box-sizing: border-box;
 }
 
-h1 {
+#title,
+#text,
+#label,
+.show-dogs {
+  color: rgb(223, 223, 223);
+}
+
+#title {
+  padding-top: 0.5em;
+  font-size: 4rem;
   margin: 0;
+}
+
+#text {
+  font-size: 2rem;
+}
+
+#label {
+  font-size: 1.75rem;
 }
 
 body {
@@ -14,33 +31,91 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("img/dog_wallpaper.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('img/dog_wallpaper.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.container {
+  padding: 0.5em;
+  max-width: 900px;
+  width: 80%;
+}
+
+.top-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #number-of-dogs {
   border: 1px solid black;
+  font-size: 1.25rem;
+  width: 8em;
+}
+
+.search-container {
+  margin-bottom: 3em;
+}
+
+.show-dogs {
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: 0.25em 0.5em;
+  background: rgba(240, 164, 23, 0.521);
+  border: none;
+  transition: all linear 500ms;
+}
+
+.show-dogs:hover,
+.show-dogs:focus {
+  background: rgb(240, 164, 23);
 }
 
 #dog-image-container {
-  margin: 0 auto;
-  border: 1px solid purple;
+  visibility: hidden;
+  background: rgb(201, 201, 201);
+  padding: 1em 0;
+  margin: 0 auto 3em auto;
+  border: 3px solid brown;
+  min-height: 20em;
   max-width: 900px;
   width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  align-content: space-between;
+  align-items: flex-start;
+  align-content: center;
 }
 
 .dog-picture {
   margin: 0.5em;
-  border: 1px solid green;
+  border: 1px solid grey;
   min-width: 150px;
   max-width: 25%;
-  height: 200px;
+  height: 90%;
   object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+  transition: all linear 500ms;
+}
+
+.dog-picture:hover,
+.dog-picture:focus {
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+}
+
+@media (max-width: 775px) {
+  #title {
+    font-size: 3rem;
+  }
+  #text {
+    font-size: 1.5rem;
+  }
+  #label {
+    font-size: 1.25rem;
+  }
 }

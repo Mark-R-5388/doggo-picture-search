@@ -8,19 +8,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Doggo Pictures</h1>
-    <p>Search below for some pictures of some doggos!</p>
-    <div class="search-container">
-      <label for="number-of-dogs">Show How Many Pups</label>
-      <input
-        type="number"
-        name="number-of-dogs"
-        id="number-of-dogs"
-        placeholder="number of dogs"
-      />
-      <button class="show-dogs">See Pups</button>
+    <div class="container top-container">
+      <h1 id="title">Doggo Pictures</h1>
+      <p id="text">Search below for some pictures of some doggos!</p>
+      <div class="search-container">
+        <label id="label" for="number-of-dogs">Show How Many Pups: </label>
+        <input
+          type="number"
+          name="number-of-dogs"
+          id="number-of-dogs"
+          placeholder="number of dogs"
+        />
+        <button class="show-dogs">See Pups</button>
+      </div>
     </div>
-    <div id="dog-image-container"></div>
+    <div class="container" id="dog-image-container"></div>
     <script src="dog-search.js"></script>
   </body>
 </html>
